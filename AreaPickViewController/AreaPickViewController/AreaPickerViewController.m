@@ -151,6 +151,7 @@
     if (!_pickerView) {
         CGFloat height = CGRectGetHeight(self.view.frame)/3;
         _pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.frame)-height, CGRectGetWidth(self.view.frame), height)];
+        _pickerView.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _pickerView.delegate = self;
         _pickerView.dataSource = self;
         [self.view addSubview:_pickerView];
