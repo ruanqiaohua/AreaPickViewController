@@ -13,8 +13,8 @@
 		F1CEACC11EA3155B004B7FCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CEACBF1EA3155B004B7FCC /* Main.storyboard */; };
 		F1CEACC31EA3155B004B7FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1CEACC21EA3155B004B7FCC /* Assets.xcassets */; };
 		F1CEACC61EA3155B004B7FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CEACC41EA3155B004B7FCC /* LaunchScreen.storyboard */; };
-		F1CEACD51EA31842004B7FCC /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CEACD41EA31842004B7FCC /* area.plist */; };
 		F1CEACD81EA31892004B7FCC /* AreaPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CEACD71EA31892004B7FCC /* AreaPickerViewController.m */; };
+		F1CEACDA1EA3621F004B7FCC /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1CEACD91EA3621F004B7FCC /* area.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		F1CEACC21EA3155B004B7FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1CEACC51EA3155B004B7FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1CEACC71EA3155B004B7FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1CEACD41EA31842004B7FCC /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		F1CEACD61EA31892004B7FCC /* AreaPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaPickerViewController.h; sourceTree = "<group>"; };
 		F1CEACD71EA31892004B7FCC /* AreaPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaPickerViewController.m; sourceTree = "<group>"; };
+		F1CEACD91EA3621F004B7FCC /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 			children = (
 				F1CEACD61EA31892004B7FCC /* AreaPickerViewController.h */,
 				F1CEACD71EA31892004B7FCC /* AreaPickerViewController.m */,
-				F1CEACD41EA31842004B7FCC /* area.plist */,
+				F1CEACD91EA3621F004B7FCC /* area.plist */,
 			);
 			path = AreaPickViewController;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1CEACC61EA3155B004B7FCC /* LaunchScreen.storyboard in Resources */,
-				F1CEACD51EA31842004B7FCC /* area.plist in Resources */,
+				F1CEACDA1EA3621F004B7FCC /* area.plist in Resources */,
 				F1CEACC31EA3155B004B7FCC /* Assets.xcassets in Resources */,
 				F1CEACC11EA3155B004B7FCC /* Main.storyboard in Resources */,
 			);

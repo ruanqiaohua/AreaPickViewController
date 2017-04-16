@@ -12,9 +12,9 @@
 
 @property (strong, nonatomic) UIToolbar *toolbar;
 @property (strong, nonatomic) UIPickerView *pickerView;
-@property (strong, nonatomic) NSArray *provinceList;
-@property (strong, nonatomic) NSArray *cityList;
-@property (strong, nonatomic) NSArray *areaList;
+@property (strong, nonatomic) NSArray <NSDictionary *> *provinceList;
+@property (strong, nonatomic) NSArray <NSDictionary *> *cityList;
+@property (strong, nonatomic) NSArray <NSString *> *areaList;
 @property (copy, nonatomic) CallBack callBack;
 
 @end
@@ -106,8 +106,7 @@
     
     NSInteger index = [_pickerView selectedRowInComponent:0];
     NSDictionary *dic = [_provinceList objectAtIndex:index];
-    NSArray *array = [dic objectForKey:@"cities"];
-    _cityList = array;
+    _cityList = dic.allValues.firstObject;
     [self.pickerView reloadComponent:1];
 }
 
@@ -115,8 +114,7 @@
     
     NSInteger index = [_pickerView selectedRowInComponent:1];
     NSDictionary *dic = [_cityList objectAtIndex:index];
-    NSArray *array = [dic objectForKey:@"areas"];
-    _areaList = array;
+    _areaList = dic.allValues.firstObject;
     [self.pickerView reloadComponent:2];
 }
 
@@ -127,13 +125,13 @@
     NSInteger index1 = [self.pickerView selectedRowInComponent:1];
     NSInteger index2 = [self.pickerView selectedRowInComponent:2];
     if (_provinceList.count) {
-        NSString *province = [[_provinceList objectAtIndex:index0] objectForKey:@"state"];
+        NSString *province = _provinceList[index0].allKeys.firstObject;
         model.province = province;
     } else {
         model.province = @"";
     }
     if (_cityList.count) {
-        NSString *city = [[_cityList objectAtIndex:index1] objectForKey:@"city"];
+        NSString *city = _cityList[index1].allKeys.firstObject;
         model.city = city;
     } else {
         model.city = @"";
@@ -197,19 +195,30 @@
 
 #pragma mark - UIPickerViewDelegate
 
-- (nullable NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+
+    UILabel* tView = (UILabel*)view;
+    if (!tView)
+    {
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+        [tView setTextAlignment:NSTextAlignmentCenter];
+        tView.numberOfLines=3;
+    }
     switch (component) {
         case 0:
-            return [[_provinceList objectAtIndex:row] objectForKey:@"state"];
+            tView.text = _provinceList[row].allKeys.firstObject;
+            break;
         case 1:
-            return [[_cityList objectAtIndex:row] objectForKey:@"city"];
+            tView.text = _cityList[row].allKeys.firstObject;
+            break;
         case 2:
-            return [_areaList objectAtIndex:row];
+            tView.text = [_areaList objectAtIndex:row];
+            break;
         default:
             break;
     }
-    return nil;
+    return tView;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
