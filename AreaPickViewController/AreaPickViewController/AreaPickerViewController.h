@@ -10,8 +10,11 @@
 
 @interface AreaPickerModel : NSObject
 
+/** 省份 */
 @property (copy, nonatomic) NSString *province;
+/** 城市 */
 @property (copy, nonatomic) NSString *city;
+/** 区域 */
 @property (copy, nonatomic) NSString *area;
 
 @end

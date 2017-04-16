@@ -24,18 +24,11 @@
 
 - (IBAction)buttonPressed:(UIButton *)sender {
 
-    AreaPickerViewController *vc;
-    // one
-     vc = [AreaPickerViewController showAreaPicker:13 city:0 area:0];
-    [vc sureButtonPressedCallBack:^(AreaPickerViewController *areaPicker, AreaPickerModel *model) {
+    AreaPickerViewController *areaPicker = [AreaPickerViewController showAreaPicker:13 city:0 area:0];
+    [areaPicker sureButtonPressedCallBack:^(AreaPickerViewController *areaPicker, AreaPickerModel *model) {
         _textLabel.text = [NSString stringWithFormat:@"%@ %@ %@",model.province,model.city,model.area];
         [areaPicker dismiss];
     }];
-    // two
-    // [AreaPickerViewController showAreaPicker];
-    // three
-    // AreaPickerViewController *vc = [AreaPickerViewController areaPicker];
-    // [vc show];
     
 }
 
