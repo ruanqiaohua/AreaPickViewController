@@ -14,7 +14,7 @@
 @property (strong, nonatomic) UIPickerView *pickerView;
 @property (strong, nonatomic) NSArray <NSDictionary *> *provinceList;
 @property (strong, nonatomic) NSArray <NSDictionary *> *cityList;
-@property (strong, nonatomic) NSArray <NSString *> *areaList;
+@property (strong, nonatomic) NSArray <NSDictionary *> *areaList;
 @property (copy, nonatomic) CallBack callBack;
 
 @end
@@ -106,7 +106,7 @@
     
     NSInteger index = [_pickerView selectedRowInComponent:0];
     NSDictionary *dic = [_provinceList objectAtIndex:index];
-    _cityList = dic.allValues.firstObject;
+    _cityList = [dic objectForKey:@"citys"];
     [self.pickerView reloadComponent:1];
 }
 
@@ -114,7 +114,7 @@
     
     NSInteger index = [_pickerView selectedRowInComponent:1];
     NSDictionary *dic = [_cityList objectAtIndex:index];
-    _areaList = dic.allValues.firstObject;
+    _areaList = [dic objectForKey:@"areas"];
     [self.pickerView reloadComponent:2];
 }
 
@@ -125,19 +125,19 @@
     NSInteger index1 = [self.pickerView selectedRowInComponent:1];
     NSInteger index2 = [self.pickerView selectedRowInComponent:2];
     if (_provinceList.count) {
-        NSString *province = _provinceList[index0].allKeys.firstObject;
+        NSString *province = [_provinceList[index0] objectForKey:@"Name"];
         model.province = province;
     } else {
         model.province = @"";
     }
     if (_cityList.count) {
-        NSString *city = _cityList[index1].allKeys.firstObject;
+        NSString *city = [_cityList[index1] objectForKey:@"Name"];
         model.city = city;
     } else {
         model.city = @"";
     }
     if (_areaList.count) {
-        NSString *area = [_areaList objectAtIndex:index2];
+        NSString *area = [_areaList[index2] objectForKey:@"Name"];
         model.area = area;
     } else {
         model.area = @"";
@@ -208,13 +208,13 @@
     }
     switch (component) {
         case 0:
-            tView.text = _provinceList[row].allKeys.firstObject;
+            tView.text = [_provinceList[row] objectForKey:@"Name"];
             break;
         case 1:
-            tView.text = _cityList[row].allKeys.firstObject;
+            tView.text = [_cityList[row] objectForKey:@"Name"];
             break;
         case 2:
-            tView.text = [_areaList objectAtIndex:row];
+            tView.text = [_areaList[row] objectForKey:@"Name"];
             break;
         default:
             break;
