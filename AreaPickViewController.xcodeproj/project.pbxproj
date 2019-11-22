@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3434AD7BEBF628AC0246E15B /* Pods_AreaPickViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3881E6606B404F0E5B70477 /* Pods_AreaPickViewController.framework */; };
+		F17316722387859000CA8086 /* ZXCityPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17316712387859000CA8086 /* ZXCityPickViewController.m */; };
+		F1731676238785EC00CA8086 /* JXPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1731675238785EC00CA8086 /* JXPickerTableViewController.m */; };
 		F1CEACB81EA3155B004B7FCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CEACB71EA3155B004B7FCC /* main.m */; };
 		F1CEACBB1EA3155B004B7FCC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CEACBA1EA3155B004B7FCC /* AppDelegate.m */; };
 		F1CEACBE1EA3155B004B7FCC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1CEACBD1EA3155B004B7FCC /* ViewController.m */; };
@@ -18,6 +21,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F9221BBD1074E7F022296B /* Pods-AreaPickViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AreaPickViewController.release.xcconfig"; path = "Target Support Files/Pods-AreaPickViewController/Pods-AreaPickViewController.release.xcconfig"; sourceTree = "<group>"; };
+		C693E9562CF439212B6882B5 /* Pods-AreaPickViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AreaPickViewController.debug.xcconfig"; path = "Target Support Files/Pods-AreaPickViewController/Pods-AreaPickViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		D3881E6606B404F0E5B70477 /* Pods_AreaPickViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AreaPickViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F17316702387859000CA8086 /* ZXCityPickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXCityPickViewController.h; sourceTree = "<group>"; };
+		F17316712387859000CA8086 /* ZXCityPickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXCityPickViewController.m; sourceTree = "<group>"; };
+		F1731674238785EC00CA8086 /* JXPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXPickerTableViewController.h; sourceTree = "<group>"; };
+		F1731675238785EC00CA8086 /* JXPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXPickerTableViewController.m; sourceTree = "<group>"; };
+		F173167723878FED00CA8086 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F1CEACB31EA3155B004B7FCC /* AreaPickViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AreaPickViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CEACB71EA3155B004B7FCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F1CEACB91EA3155B004B7FCC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,17 +49,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3434AD7BEBF628AC0246E15B /* Pods_AreaPickViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80F159ABF33E692AA10E35D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C693E9562CF439212B6882B5 /* Pods-AreaPickViewController.debug.xcconfig */,
+				05F9221BBD1074E7F022296B /* Pods-AreaPickViewController.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EFD9E3DF98E426C7B8091E5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3881E6606B404F0E5B70477 /* Pods_AreaPickViewController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1731673238785BC00CA8086 /* ZXCityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				F17316702387859000CA8086 /* ZXCityPickViewController.h */,
+				F17316712387859000CA8086 /* ZXCityPickViewController.m */,
+				F1731674238785EC00CA8086 /* JXPickerTableViewController.h */,
+				F1731675238785EC00CA8086 /* JXPickerTableViewController.m */,
+			);
+			path = ZXCityPicker;
+			sourceTree = "<group>";
+		};
 		F1CEACAA1EA3155B004B7FCC = {
 			isa = PBXGroup;
 			children = (
 				F1CEACB51EA3155B004B7FCC /* AreaPickViewController */,
 				F1CEACB41EA3155B004B7FCC /* Products */,
+				A80F159ABF33E692AA10E35D /* Pods */,
+				EFD9E3DF98E426C7B8091E5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +105,7 @@
 		F1CEACB51EA3155B004B7FCC /* AreaPickViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F1731673238785BC00CA8086 /* ZXCityPicker */,
 				F1CEACD31EA31837004B7FCC /* AreaPickViewController */,
 				F1CEACB91EA3155B004B7FCC /* AppDelegate.h */,
 				F1CEACBA1EA3155B004B7FCC /* AppDelegate.m */,
@@ -81,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CEACB71EA3155B004B7FCC /* main.m */,
+				F173167723878FED00CA8086 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -102,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1CEACCA1EA3155B004B7FCC /* Build configuration list for PBXNativeTarget "AreaPickViewController" */;
 			buildPhases = (
+				5AE716D3969CD59BF35C2165 /* [CP] Check Pods Manifest.lock */,
 				F1CEACAF1EA3155B004B7FCC /* Sources */,
 				F1CEACB01EA3155B004B7FCC /* Frameworks */,
 				F1CEACB11EA3155B004B7FCC /* Resources */,
+				278D1C18E112A970D6E4FA77 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +181,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -162,15 +209,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		278D1C18E112A970D6E4FA77 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AreaPickViewController/Pods-AreaPickViewController-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AreaPickViewController/Pods-AreaPickViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AE716D3969CD59BF35C2165 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AreaPickViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1CEACAF1EA3155B004B7FCC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17316722387859000CA8086 /* ZXCityPickViewController.m in Sources */,
 				F1CEACBE1EA3155B004B7FCC /* ViewController.m in Sources */,
 				F1CEACBB1EA3155B004B7FCC /* AppDelegate.m in Sources */,
 				F1CEACD81EA31892004B7FCC /* AreaPickerViewController.m in Sources */,
 				F1CEACB81EA3155B004B7FCC /* main.m in Sources */,
+				F1731676238785EC00CA8086 /* JXPickerTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +382,12 @@
 		};
 		F1CEACCB1EA3155B004B7FCC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C693E9562CF439212B6882B5 /* Pods-AreaPickViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = AreaPickViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruanqiaohua.AreaPickViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,9 +396,12 @@
 		};
 		F1CEACCC1EA3155B004B7FCC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F9221BBD1074E7F022296B /* Pods-AreaPickViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = AreaPickViewController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruanqiaohua.AreaPickViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";

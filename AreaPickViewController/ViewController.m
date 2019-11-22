@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AreaPickerViewController.h"
+#import "ZXCityPickViewController.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,12 @@
         [areaPicker dismiss];
     }];
     
+}
+
+- (IBAction)button2Pressed:(UIButton *)sender {
+
+    ZXCityPickViewController *areaPicker = [[ZXCityPickViewController alloc] init];
+    [self showDetailViewController:areaPicker sender:nil];
 }
 
 - (void)didReceiveMemoryWarning {
